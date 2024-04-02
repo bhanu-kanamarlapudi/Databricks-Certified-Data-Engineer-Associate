@@ -22,6 +22,21 @@ DESCRIBE EXTENDED managed_default
 
 -- COMMAND ----------
 
+-- Step 1: Create a connection
+CREATE CONNECTION your_connection_name
+  LOCATION 'dbfs:/mnt/demo/external_default';
+
+-- Step 2: Create a catalog based on the connection
+CREATE FOREIGN TABLE your_catalog_name.external_default
+  (width INT, length INT, height INT)
+  LOCATION 'dbfs:/mnt/demo/external_default';
+
+-- Step 3: Insert data into the table
+INSERT INTO your_catalog_name.external_default
+VALUES (3, 2, 1);
+
+-- COMMAND ----------
+
 CREATE TABLE external_default
   (width INT, length INT, height INT)
 LOCATION 'dbfs:/mnt/demo/external_default';

@@ -89,3 +89,7 @@ SHOW TABLES IN global_temp;
 -- COMMAND ----------
 
 SHOW TABLES
+
+-- COMMAND ----------
+
+

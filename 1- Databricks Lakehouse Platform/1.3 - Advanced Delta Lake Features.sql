@@ -10,6 +10,11 @@ DESCRIBE HISTORY employees
 -- COMMAND ----------
 
 SELECT * 
+FROM employees
+
+-- COMMAND ----------
+
+SELECT * 
 FROM employees VERSION AS OF 4
 
 -- COMMAND ----------
